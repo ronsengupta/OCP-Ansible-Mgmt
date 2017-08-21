@@ -1,0 +1,11 @@
+---
+- hosts:  localhost
+  tasks:
+        - name: include var
+          include_vars: /Users/ronsengupta/ron-role/tasks/var.yml
+        - name: create file
+          command: touch {{ file_name }}
+          register: result
+        - name: create file
+          command: touch {{ new_name }}
+          register: result

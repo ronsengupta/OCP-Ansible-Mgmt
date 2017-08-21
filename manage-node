@@ -1,0 +1,11 @@
+- hosts: master1.example.com
+
+  tasks:
+
+        - name: check nodes
+
+          command: oc get nodes
+          register: result
+          
+        - debug:
+            var: result
